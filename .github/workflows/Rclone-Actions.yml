@@ -48,7 +48,9 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone sync -P pan:/"public/小学英语" sharepoint_tj:/test
-          echo "同步文件完毕"
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.114.0607.0002" -P pan:/public pan_cn:/public
+          echo "pan_cn文件同步完毕"
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.114.0607.0002" -P pan:/public tongji:/media
+          echo "SharePoint文件同步完毕"
 
           
