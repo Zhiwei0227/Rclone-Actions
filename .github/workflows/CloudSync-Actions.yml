@@ -2,10 +2,8 @@ name: CloudSync-Actions
 
 on:
   push:
-    tags:
-    - 'v*'
- #   branches:
- #     - master
+    branches:
+      - master
   schedule:
     - cron: 0 */6 * * *
   watch:
