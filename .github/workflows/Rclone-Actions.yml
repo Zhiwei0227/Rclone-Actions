@@ -11,7 +11,7 @@ on:
 jobs:
   run-it:
     runs-on: ubuntu-latest
-    name: E5-Rclone-Actions
+    name: Rclone-Actions
     steps:
       - name: Checkout master
         uses: actions/checkout@master
@@ -48,9 +48,9 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.114.0607.0002" -P pan:/public pan_cn:/public
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.114.0607.0002" -v pan:/public pan_cn:/public
           echo "pan_cn文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.114.0607.0002" -P pan:/public tongji:/media
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.114.0607.0002" -v pan:/public tongji:/media
           echo "SharePoint文件同步完毕"
 
           
