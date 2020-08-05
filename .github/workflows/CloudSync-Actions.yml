@@ -48,14 +48,14 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone sync -v weking_dropbox: weking_edu:Dropbox
+          ./rclone sync -P weking_dropbox: weking_edu:Dropbox
           echo "Dropbox文件已备份到Google盘"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.124.0621.0006" -v weking_doc: weking_edu:OneDrive
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.124.0621.0006" -P weking_doc: weking_edu:OneDrive
           echo "weking_doc文件已备份到Google盘"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.124.0621.0006" -v weking_doc: weking_docbak:
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.124.0621.0006" -P weking_doc: weking_docbak:
           echo "weking_doc文件已备份到OneDrive盘"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.124.0621.0006" -v weking_edu: weking_spare:/spare
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.124.0621.0006" -P weking_edu: weking_spare:/spare
           echo "weking_edu文件已备份到OneDrive备用盘"
-          ./rclone sync -v weking_edu: weking_edubak:
+          ./rclone sync -P weking_edu: weking_edubak:
           echo "weking_edu文件已备份到Google备用盘"
 
