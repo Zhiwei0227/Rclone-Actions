@@ -16,7 +16,7 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@master
       - name: Rclone-Install
-        run: wget 'https://pan.weking.top/tools/rclone' --no-check-certificate && sudo chmod a+x rclone
+        run: wget 'https://raw.githubusercontent.com/wekingchen/my-file/master/rclone/rclone.zip' --no-check-certificate && sudo unzip rclone.zip && sudo chmod a+x rclone && sudo rm -f rclone.zip
       - name: Rclone-Config
         env:
           RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
