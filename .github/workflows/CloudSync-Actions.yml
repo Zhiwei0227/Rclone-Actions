@@ -56,6 +56,6 @@ jobs:
           echo "weking_doc文件已备份到OneDrive盘"
           ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.169.0823.0008" -v weking_edu: weking_spare:/spare --drive-acknowledge-abuse
           echo "weking_edu文件已备份到OneDrive备用盘"
-          ./rclone sync -v weking_edu: weking_edubak:
+          ./rclone sync -v weking_edu: weking_edubak: --drive-acknowledge-abuse
           echo "weking_edu文件已备份到Google备用盘"
 
