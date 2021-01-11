@@ -54,5 +54,7 @@ jobs:
           echo "同济SharePoint文件同步完毕"
           ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.201.1005.0009" -v pan:/public nanjing:/media/public
           echo "南农SharePoint文件同步完毕"
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.201.1005.0009" -v tongji:/mine nanjing:/mine
+          echo "南农SharePoint同步个人盘完毕"
 
           
