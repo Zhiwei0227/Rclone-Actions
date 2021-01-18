@@ -19,12 +19,12 @@ jobs:
         run: wget 'https://raw.githubusercontent.com/wekingchen/my-file/master/rclone/rclone.zip' --no-check-certificate && sudo unzip rclone.zip && sudo chmod a+x rclone && sudo rm -f rclone.zip
       - name: Rclone-Config
         env:
-          RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
+          PANSYNC_RCLONE_CONFIG: ${{ secrets.PANSYNC_RCLONE_CONFIG }}
         run: |
           # 写配置文件
           mkdir -p ~/.config/rclone/
           cat << EOF > ~/.config/rclone/rclone.conf
-          $RCLONE_CONFIG
+          $PANSYNC_RCLONE_CONFIG
           EOF
       - name: Rclone-Run
         run: |
