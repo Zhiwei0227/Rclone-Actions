@@ -48,8 +48,8 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          # ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.201.1005.0009" -v pan:/public pan_cn:/public
+          # ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.002.0104.0005" -v pan:/public pan_cn:/public
           # echo "pan_cn文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/20.201.1005.0009" -v pan:/public tongji:/media/public
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.002.0104.0005" -v pan:/public tongji:/media/public
           echo "同济SharePoint文件同步完毕"
           
