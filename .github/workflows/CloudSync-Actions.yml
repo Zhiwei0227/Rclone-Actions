@@ -60,4 +60,6 @@ jobs:
           echo "weking_edu文件已备份到OneDrive备用盘"
           ./rclone sync -v weking_edu: weking_edubak: --drive-acknowledge-abuse
           echo "weking_edu文件已备份到Google备用盘"
+          ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/CloudSync
+          echo "Rclone配置档备份完毕"
 
