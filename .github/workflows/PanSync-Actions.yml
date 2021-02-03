@@ -52,4 +52,6 @@ jobs:
           # echo "pan_cn文件同步完毕"
           ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.002.0104.0005" -v pan:/public tongji:/media/public
           echo "同济SharePoint文件同步完毕"
+          ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/PanSync
+          echo "rclone配置档备份完毕"
           
