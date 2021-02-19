@@ -52,11 +52,11 @@ jobs:
           echo "Dropbox文件已备份到Google盘"
           ./rclone sync -v weking_spare:bitwarden_backup seafile:Bitwarden_Backup
           echo "Bitwarden配置已备份到Seafile"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.002.0104.0005" -v weking_doc: weking_edu:OneDrive
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.016.0124.0003" -v weking_doc: weking_edu:OneDrive
           echo "weking_doc文件已备份到Google盘"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.002.0104.0005" -v weking_doc: weking_docbak:
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.016.0124.0003" -v weking_doc: weking_docbak:
           echo "weking_doc文件已备份到OneDrive盘"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.002.0104.0005" -v weking_edu: weking_spare:/spare --drive-acknowledge-abuse
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.016.0124.0003" -v weking_edu: weking_spare:/spare --drive-acknowledge-abuse
           echo "weking_edu文件已备份到OneDrive备用盘"
           ./rclone sync -v weking_edu: weking_edubak: --drive-acknowledge-abuse
           echo "weking_edu文件已备份到Google备用盘"
