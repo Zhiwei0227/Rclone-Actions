@@ -48,15 +48,15 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.099.0516.0003" -v pan: tj_s:/media
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.119.0613.0001" -v pan: tj_s:/media
           echo "同济SharePoint影视文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.099.0516.0003" -v pan: sharepoint_cn:/media
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.119.0613.0001" -v pan: sharepoint_cn:/media
           echo "sharepoint_cn影视文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.099.0516.0003" -v pan: sust_sharepoint:/media
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.119.0613.0001" -v pan: sust_sharepoint:/media
           echo "陕西科技大学sharepoint影视文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.099.0516.0003" -v tj_s: sharepoint_cn:
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.119.0613.0001" -v tj_s: sharepoint_cn:
           echo "同济SharePoint到sharepoint_cn的文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.099.0516.0003" -v tj_s: sust_sharepoint:
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.119.0613.0001" -v tj_s: sust_sharepoint:
           echo "同济SharePoint到陕西科技大学SharePoint的文件同步完毕"
           ./rclone lsd tj_o:
           echo "同济OneDrive保活刷新完毕"
