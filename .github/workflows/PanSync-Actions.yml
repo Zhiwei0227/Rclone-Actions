@@ -67,4 +67,5 @@ jobs:
           ./rclone lsd scut_s:
           echo "华工SharePoint保活刷新完毕"
           ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/PanSync
+          ./rclone copy /etc/profile weking_dropbox:PrivateDoc/rclone/PanSync
           echo "rclone配置档备份完毕"
