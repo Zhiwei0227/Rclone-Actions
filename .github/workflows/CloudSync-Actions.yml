@@ -50,8 +50,8 @@ jobs:
 
           ./rclone sync -v weking_dropbox: weking_edu:Dropbox
           echo "Dropbox文件已备份到Google盘"
-          # ./rclone sync -v weking_spare:bitwarden_backup seafile:Bitwarden_Backup
-          # echo "Bitwarden配置已备份到Seafile"
+          ./rclone sync -v weking_spare:bitwarden_backup seafile:Bitwarden_Backup
+          echo "Bitwarden配置已备份到Seafile"
           ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.205.1003.0005" -v weking_doc: weking_edu:OneDrive
           echo "weking_doc文件已备份到Google盘"
           ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.205.1003.0005" -v weking_doc: weking_docbak:
