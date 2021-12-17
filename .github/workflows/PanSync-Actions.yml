@@ -67,7 +67,9 @@ jobs:
           ./rclone lsd scut_o:
           echo "华工OneDrive保活刷新完毕"
           ./rclone lsd scut_s:
-          echo "华工SharePoint保活刷新完毕"
+          echo "华工SharePoint保活刷新完毕"          
+          ./rclone lsd tongji_test:
+          echo "同济Test保活刷新完毕"
           ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/PanSync
           echo "rclone配置档备份完毕"
 
