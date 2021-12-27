@@ -60,8 +60,8 @@ jobs:
           echo "weking_edu文件已备份到Google备用盘"
           ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/CloudSync
           echo "Rclone配置档备份完毕"
-          # ./rclone sync -v weking_spare:bitwarden_backup seafile:Bitwarden_Backup
-          # echo "Bitwarden配置已备份到Seafile"
+          ./rclone sync -v weking_spare:bitwarden_backup seafile:Bitwarden_Backup
+          echo "Bitwarden配置已备份到Seafile"
 
       # - name: Delete workflow runs
       #   uses: GitRML/delete-workflow-runs@main
