@@ -60,10 +60,10 @@ jobs:
           echo "sharepoint_cn影视文件同步完毕"
           # ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.055.0313.0001" -v sust_sharepoint: sharepoint_cn:
           # echo "陕西科技大学sharepoint到sharepoint_cn的文件同步完毕"
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.055.0313.0001" -v sharepoint_cn:/mine tj_o:/mine
+          echo "sharepoint_cn到同济OneDrive的个人文件同步完毕"
           ./rclone lsd tongji_golden:
           echo "同济SharePoint_golden保活刷新完毕"
-          ./rclone lsd tj_o:
-          echo "同济OneDrive保活刷新完毕"
           ./rclone lsd scut_o:
           echo "华工OneDrive保活刷新完毕"
           ./rclone lsd scut_s:
