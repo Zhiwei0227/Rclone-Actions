@@ -48,11 +48,11 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.055.0313.0001" -v pan: scut_s:/media
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.065.0412.0004" -v pan: scut_s:/media
           echo "华工SharePoint影视文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.055.0313.0001" -v pan: sharepoint_cn:/media
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.065.0412.0004" -v pan: sharepoint_cn:/media
           echo "sharepoint_cn影视文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.055.0313.0001" -v scut_s: sharepoint_cn:
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.065.0412.0004" -v scut_s: sharepoint_cn:
           echo "华工SharePoint到sharepoint_cn的文件同步完毕"
           
           ./rclone lsd scut_o:
@@ -61,7 +61,7 @@ jobs:
           ./rclone lsd aowu_o:
           echo "aowu_o保活刷新完毕"
           
-          ./rclone lsd aowu_s:
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.065.0412.0004" -v scut_s: aowu_s:
           echo "aowu_s保活刷新完毕"
           
           ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/PanSync
