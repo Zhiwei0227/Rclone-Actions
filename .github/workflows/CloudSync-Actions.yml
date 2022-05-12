@@ -56,8 +56,8 @@ jobs:
           echo "weking_doc文件已备份到OneDrive盘"
           ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.065.0327.0002" -v weking_edu: weking_spare:/spare --drive-acknowledge-abuse
           echo "weking_edu文件已备份到OneDrive备用盘"
-          ./rclone sync -v weking_edu: weking_edubak: --drive-acknowledge-abuse
-          echo "weking_edu文件已备份到Google备用盘"
+          # ./rclone sync -v weking_edu: weking_edubak: --drive-acknowledge-abuse
+          # echo "weking_edu文件已备份到Google备用盘"
           ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/CloudSync
           echo "Rclone配置档备份完毕"
           ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.065.0327.0002" -v weking_spare:/"图片/本机照片" seafile:iPhone13ProMax
