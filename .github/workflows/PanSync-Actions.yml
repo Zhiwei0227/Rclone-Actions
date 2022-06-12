@@ -48,8 +48,8 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone copy --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.111.0522.0002" -v aria2:aria2/"外语电影/侏罗纪五部合集.HDR.4K.2160P" pan:public/"外语电影/侏罗纪五部合集.HDR.4K.2160P"
-          echo "侏罗纪系列同步完毕"
+          # ./rclone copy --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.111.0522.0002" -v aria2:aria2/"外语电影/侏罗纪五部合集.HDR.4K.2160P" pan:public/"外语电影/侏罗纪五部合集.HDR.4K.2160P"
+          # echo "侏罗纪系列同步完毕"
 
           ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.111.0522.0002" -v pan: scut_s:/media
           echo "华工SharePoint影视文件同步完毕"
