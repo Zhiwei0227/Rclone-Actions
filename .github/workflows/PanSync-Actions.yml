@@ -48,25 +48,22 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          # ./rclone copy --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.111.0522.0002" -v aria2:aria2/"外语电影/侏罗纪五部合集.HDR.4K.2160P" pan:public/"外语电影/侏罗纪五部合集.HDR.4K.2160P"
+          # ./rclone copy --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.131.0619.0001" -v aria2:aria2/"外语电影/侏罗纪五部合集.HDR.4K.2160P" pan:public/"外语电影/侏罗纪五部合集.HDR.4K.2160P"
           # echo "侏罗纪系列同步完毕"
 
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.111.0522.0002" -v pan: scut_s:/media
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.131.0619.0001" -v pan: scut_s:/media
           echo "华工SharePoint影视文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.111.0522.0002" -v pan: sharepoint_cn:/media
-          echo "sharepoint_cn影视文件同步完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.111.0522.0002" -v scut_s: sharepoint_cn:
-          echo "华工SharePoint到sharepoint_cn的文件同步完毕"
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.131.0619.0001" -v pan: aowu_s:/media
+          echo "aowu_s影视文件同步完毕"
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.131.0619.0001" -v scut_s: aowu_s:
+          echo "华工SharePoint到aowu_s的文件同步完毕"
           
           ./rclone lsd scut_o:
           echo "华工OneDrive保活刷新完毕"
 
           ./rclone lsd aowu_o:
           echo "aowu_o保活刷新完毕"
-          
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.111.0522.0002" -v scut_s: aowu_s:
-          echo "aowu_s保活刷新完毕"
-          
+       
           ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/PanSync
           echo "rclone配置档备份完毕"
 
