@@ -60,7 +60,7 @@ jobs:
           # echo "weking_edu文件已备份到Google备用盘"
           ./rclone copy ~/.config/rclone/rclone.conf weking_dropbox:PrivateDoc/rclone/CloudSync
           echo "Rclone配置档备份完毕"
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.065.0327.0002" -v weking_spare:/"图片/本机照片" seafile:iPhone13ProMax
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/22.065.0327.0002" -v weking_spare:iOS_Photo seafile:iPhone_Photo
           echo "iPhone13PM照片已备份到Seafile"          
           ./rclone sync -v weking_spare:bitwarden_backup seafile:Bitwarden_Backup
           echo "Bitwarden配置已备份到Seafile"
