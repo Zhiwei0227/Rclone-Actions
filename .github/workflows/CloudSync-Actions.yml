@@ -20,7 +20,7 @@ jobs:
         run: wget 'https://raw.githubusercontent.com/wekingchen/my-file/master/rclone/rclone.zip' --no-check-certificate && sudo unzip rclone.zip && sudo chmod a+x rclone && sudo rm -f rclone.zip
       - name: Rclone-Config
         env:
-          CLOUDSYNC_RCLONE_CONFIG: ${{ secrets.CLOUDSYNC_RCLONE_CONFIG }}
+          CLOUDSYNC_RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
         run: |
           # 写配置文件
           mkdir -p ~/.config/rclone/
