@@ -33,7 +33,7 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone copy -v od: od2: --transfers 6 --checkers 64
+          ./rclone copy -v od: od2: --transfers 8 --checkers 64 --exclude "/群晖同步/"
           echo "copy od → od2"
 
       # - name: Delete workflow runs
